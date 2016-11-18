@@ -18,7 +18,7 @@ class RomanNumeral
 
   def converter(number)
     result = ""
-    result << "M" * (number / 1000) 
+    result << "M" * (number / 1000)
     number -= 1000
 
 
