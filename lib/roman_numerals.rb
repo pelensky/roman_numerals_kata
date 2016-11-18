@@ -18,10 +18,10 @@ class RomanNumeral
 
   def converter(number)
     result = ""
-    result << "M" * (number / 1000)
-    number -= 1000
-
-
+    ROMAN_NUMERALS.each do |key, value|
+      (number / key).times { result << value ; number -= key }
+    end
+    return result
   end
 
 end
